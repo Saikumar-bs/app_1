@@ -1,4 +1,5 @@
 import 'package:app_1/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -64,6 +65,11 @@ class HomeScreen extends StatelessWidget {
                       child: SvgPicture.asset('assets/icons/profile.svg'),
                     ),
                   ),
+                  Text("Welcome to Forwards!",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 50.0,
+                          fontWeight: FontWeight.bold))
                 ],
               ),
             ),
