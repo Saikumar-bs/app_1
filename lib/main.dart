@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Roboto",
-        scaffoldBackgroundColor: Colors.orange.shade700,
+        scaffoldBackgroundColor: Colors.orange.shade200,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: HomeScreen(),
@@ -48,6 +48,26 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      height: 45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                          color: Colors.orange.shade200,
+                          shape: BoxShape.circle),
+                      child: SvgPicture.asset('assets/icons/profile.svg'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
