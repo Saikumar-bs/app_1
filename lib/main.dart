@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Roboto",
-        scaffoldBackgroundColor: Colors.orange.shade200,
+        scaffoldBackgroundColor: Color(0XFFF06C04),
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: HomeScreen(),
@@ -40,11 +40,12 @@ class HomeScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.black,
               image: DecorationImage(
-                alignment: Alignment.center,
+                alignment: Alignment.bottomCenter,
+                fit: BoxFit.fill,
                 colorFilter: new ColorFilter.mode(
                     Colors.black.withOpacity(0.5), BlendMode.dstATop),
                 image: AssetImage(
-                  "assets/images/logo.png",
+                  "assets/images/wallpaper.png",
                 ),
               ),
             ),
@@ -60,8 +61,7 @@ class HomeScreen extends StatelessWidget {
                       height: 45,
                       width: 45,
                       decoration: BoxDecoration(
-                          color: Colors.orange.shade200,
-                          shape: BoxShape.circle),
+                          color: Color(0XFFF06C04), shape: BoxShape.circle),
                       child: SvgPicture.asset('assets/icons/profile.svg'),
                     ),
                   ),
