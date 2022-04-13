@@ -69,7 +69,20 @@ class HomeScreen extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 50.0,
-                          fontWeight: FontWeight.bold))
+                          fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      "A knowledge board for the people and writing board on the internet.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12.0,
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
