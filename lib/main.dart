@@ -1,5 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:app_1/constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -42,7 +43,7 @@ class HomeScreen extends StatelessWidget {
               image: DecorationImage(
                 alignment: Alignment.bottomCenter,
                 fit: BoxFit.fill,
-                colorFilter: new ColorFilter.mode(
+                colorFilter: ColorFilter.mode(
                     Colors.black.withOpacity(0.5), BlendMode.dstATop),
                 image: AssetImage(
                   "assets/images/wallpaper.png",
@@ -86,39 +87,14 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
-                      childAspectRatio: 0.95,
+                      childAspectRatio: 1,
+                      crossAxisSpacing: 8.0,
+                      mainAxisSpacing: 8.0,
                       children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(25.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(18.0),
-                              child: Column(
-                                children: [
-                                  Text("Quotes",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.bold)),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-Text(
-                                        "With our thoughts, we make the world.",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.normal)),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        )
+                        card(),
+                        card(),
+                        card(),
+                        card(),
                       ],
                     ),
                   ),
@@ -127,6 +103,50 @@ Text(
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class card extends StatelessWidget {
+  const card({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Quotes",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Text("Biology gives you a brain. Life turns it into a mind.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontStyle: FontStyle.italic,
+                  )),
+            ],
+          ),
+        ),
       ),
     );
   }
