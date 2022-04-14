@@ -38,7 +38,9 @@ class HomeScreen extends StatelessWidget {
                       width: 40,
                       decoration: BoxDecoration(
                           color: Color(0XFFF06C04), shape: BoxShape.circle),
-                      child: SvgPicture.asset('assets/icons/profile.svg'),
+                      child: SvgPicture.asset(
+                        'assets/icons/profile.svg',
+                      ),
                     ),
                   ),
                   Text("Welcome to Forwards!",
@@ -69,12 +71,36 @@ class HomeScreen extends StatelessWidget {
                       crossAxisSpacing: 6.0,
                       mainAxisSpacing: 6.0,
                       children: <Widget>[
-                        card(),
-                        card(),
-                        card(),
-                        card(),
-                        card(),
-                        card(),
+                        card(
+                          title: "Quotes",
+                          matter:
+                              "If you cannot do great things, do small things in a great way.",
+                        ),
+                        card(
+                          title: "Facts",
+                          matter:
+                              "People develop first impressions of you in a tenth of a second.",
+                        ),
+                        card(
+                          title: "Tips",
+                          matter:
+                              "Adding turmeric to your diet can increase your focus.",
+                        ),
+                        card(
+                          title: "Scribbles",
+                          matter:
+                              "Don't forget how badly you once wanted what you have now.",
+                        ),
+                        card(
+                          title: "Jokes",
+                          matter:
+                              "Conora virus will not end until you read the first word correctly.",
+                        ),
+                        card(
+                          title: "Slokas",
+                          matter:
+                              "Asatoma sad gamaya, Tamaso ma jyotir gamaya, Mrityor ma amritam gamaya, Om shanti, shanti, shanti hi",
+                        ),
                       ],
                     ),
                   ),

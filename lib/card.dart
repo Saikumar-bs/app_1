@@ -1,8 +1,14 @@
+import 'package:app_1/constants.dart';
 import 'package:flutter/material.dart';
 
 class card extends StatelessWidget {
+  final title;
+  final matter;
+
   const card({
     Key? key,
+    this.title,
+    this.matter,
   }) : super(key: key);
 
   @override
@@ -15,26 +21,28 @@ class card extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Quotes",
+                title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.black,
+                    color: kTextColor,
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 20.0,
               ),
-              Text("Biology gives you a brain. Life turns it into a mind.",
+              Text(matter,
+                  maxLines: 4,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16.0,
                     fontStyle: FontStyle.italic,
+                    overflow: TextOverflow.ellipsis,
                   )),
             ],
           ),
